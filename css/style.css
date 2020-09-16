@@ -1,5 +1,17 @@
 body {
   font-family: 'Raleway', sans-serif;
+  box-sizing: content-box;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: #ffd24a;
+  text-decoration: none;
 }
 
 /* navbar */
@@ -49,6 +61,15 @@ body {
   .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus {
     color: #333;
+  }
+
+  .portofolio {
+    padding-bottom: 50px;
+  }
+
+  .my-contact {
+    flex-direction: column;
+    padding-bottom: 50px;
   }
 }
 
@@ -169,14 +190,14 @@ section {
   margin-top: 50px;
 }
 
-img {
+/* img {
   min-width: 250px;
   min-height: 250px;
-}
+} */
 
 footer {
   /* min-height: 100px; */
-  margin-top: 70px;
+  /* margin-top: 70px; */
   background-color: #2d3436;
 }
 
@@ -226,6 +247,26 @@ nav,
 .contact {
   background-color: #E17055;
   color: white;
+  min-height: 400px;
+}
+
+.my-contact {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* flex: 1; */
+}
+
+.contact-icon {
+  height: 64px;
+  margin: 50px 10px;
+}
+
+.contact-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* end contact */
