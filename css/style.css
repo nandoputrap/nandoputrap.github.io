@@ -230,6 +230,10 @@ nav,
   font-size: 18px;
 }
 
+p {
+  font-size: 16px;
+}
+
 /* begin portofolio */
 /* .caption-portofolio{
   display: block;
@@ -240,6 +244,11 @@ nav,
   top: 0;
   opacity: 0;
 } */
+
+
+.img-skill:hover .overlay {
+  height: 100%;
+}
 
 .thumbnail {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
@@ -353,4 +362,12 @@ nav,
 .modal img {
   border-radius: 10px;
   margin-bottom: 20px;
+}
+
+.modal-body {
+  padding: 50px;
+}
+
+.modal-body a {
+  color: #EB5757;
 }
