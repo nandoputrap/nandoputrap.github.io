@@ -1,5 +1,5 @@
 // fungsi smooth page scrolling
-$('.page-scroll').on('click', function(e){
+$('.page-scroll').on('click', function (e) {
   //console.log('nice'); //untuk debugging
 
   //ambil isi href
@@ -9,7 +9,7 @@ $('.page-scroll').on('click', function(e){
   var elementujuan = $(tujuan);
 
   $('html, body').animate({
-    scrollTop: elementujuan.offset().top -50
+    scrollTop: elementujuan.offset().top - 50
   }, 1250, 'easeInOutExpo');
 
   e.preventDefault();
@@ -17,45 +17,45 @@ $('.page-scroll').on('click', function(e){
 }); //jquery, tolong carikan saya class page scroll. Ketika di klik, maka jalankan fungsi berikut ini
 
 //jumbotron on load
-$(window).on('load', function(){
+$(window).on('load', function () {
   $('.jumbotron img').addClass('show-jumbotron');
   $('.jumbotron h1').addClass('show-jumbotron');
   $('.jumbotron p').addClass('show-jumbotron');
 });
 
 // fungsi parallax
-$(window).scroll(function(){
+$(window).scroll(function () {
   var wScroll = $(this).scrollTop();
 
   //jumbotron
   $('.jumbotron img').css({
-    'transform' : 'translate(0px, '+ wScroll/4 + '%)'
+    'transform': 'translate(0px, ' + wScroll / 4 + '%)'
   });
 
   $('.jumbotron h1').css({
-    'transform' : 'translate(0px, '+ wScroll/2 + '%)'
+    'transform': 'translate(0px, ' + wScroll / 2 + '%)'
   });
 
   $('.jumbotron p').css({
-    'transform' : 'translate(0px, '+ wScroll/1.5 + '%)'
+    'transform': 'translate(0px, ' + wScroll / 1.5 + '%)'
   });
 
   //skills
   if (wScroll > $('.skills').offset().top - 250) {
     // console.log('nice');
-    $('.skills img').each(function(i){
-      setTimeout(function(){
+    $('.skills img').each(function (i) {
+      setTimeout(function () {
         $('.skills img').eq(i).addClass('show-skills');
-      }, 300 * (i+1));
+      }, 300 * (i + 1));
     });
   }
 
   if (wScroll > $('.skills').offset().top - 250) {
     // console.log('nice');
-    $('.skills h3').each(function(i){
-      setTimeout(function(){
+    $('.skills h3').each(function (i) {
+      setTimeout(function () {
         $('.skills h3').eq(i).addClass('show-skills');
-      }, 300 * (i+1));
+      }, 300 * (i + 1));
     });
   }
 
@@ -72,7 +72,45 @@ $(window).scroll(function(){
 
   if (wScroll > $('.about').offset().top - 400) {
     $('.navbar').addClass('my-navbar');
-  }else{
+  } else {
     $('.navbar').removeClass('my-navbar');
   }
 });
+
+$(document).ready(function () {
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: false
+      },
+      600: {
+        items: 2,
+        nav: false
+      },
+      1000: {
+        items: 3,
+        nav: true,
+        loop: true
+      }
+    },
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true
+  });
+});
+
+
+// var owl = $('.owl-carousel');
+// owl.owlCarousel({
+//   items: 4,
+//   loop: true,
+//   margin: 10,
+//   autoplay: true,
+//   autoplayTimeout: 1000,
+//   autoplayHoverPause: true
+// });
