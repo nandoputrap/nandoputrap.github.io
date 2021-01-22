@@ -371,3 +371,7 @@ p {
 .modal-body a {
   color: #EB5757;
 }
+
+.about p{
+  line-height: 30px;
+}
